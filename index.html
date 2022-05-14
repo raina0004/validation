@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"href="validation.css">
+</head>
+<body>
+ <center>
+      <div class="container">
+
+  <h3 class="login">Log in </h3>
+    <form action=""onsubmit="return myForm()">
+
+
+  <div class="naam">  <input type="text" id="name"placeholder="enter your name">
+     <p id="result"</p></div>
+
+
+    <div class="pass"><input type="password"id="password"placeholder="enter your password">
+    <p id="result1"></p></div>
+
+
+   <div class="mail"> <input type="text"id="email"placeholder="enter your email">
+    <p id="result3"></p></div>
+<!-- 
+  <div class="text-area">  <label for="textarea">FeedBack</label>
+    <br>
+    <br
+    <textarea row="4"> -->
+    <!-- </textarea></div> -->
+
+    <input type="submit"class="input">
+</div>
+    </form>
+    </div>
+    </center>
+<script>
+   
+   let  name=document.getElementById("name");
+    let  password=document.getElementById("password");
+    let email=document.getElementById("email");
+    let flag=0;
+function myForm(){
+if(name.value=="")
+{
+    document.getElementById("result").innerHTML="please enter user name";
+flag=0;
+}
+else
+{
+    document.getElementById("result").innerHTML="";
+flag=1;
+}
+
+ if(password.value=="")
+{
+    document.getElementById("result1").innerHTML="please enter the password";
+flag=0;
+}
+else{
+    document.getElementById("result1").innerHTML="";
+flag=1;
+}
+
+if(email.value=="")
+{
+    document.getElementById("result3").innerHTML="please enter the email";
+flag=0;
+}
+else{
+    document.getElementById("result3").innerHTML="";
+flag=1;
+}
+if(flag)
+{
+    return true;
+}
+else{
+return false;
+}
+}
+</script>
+
+</body>
+</html>
